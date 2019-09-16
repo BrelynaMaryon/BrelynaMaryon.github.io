@@ -1,4 +1,58 @@
-.stylish{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 2em;
+body{
+    width: 100%;
+    height:99%;
 }
+
+html{
+    width: 99%;
+    height:99%;
+}
+
+#mainframe{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#hbandrew{
+    font-size: 5em;
+    font-family: "Coolvetica";
+}
+
+.message{
+    border-radius: 0.5em;
+    box-shadow: 0.2em;
+    width: 80%;
+    height: 30em;
+    resize: none;
+    margin: 3em;
+    outline: none;
+    box-sizing: content-box;
+    padding: 3em;
+    background-color: lightgray;
+}
+
+
+#submit{
+    font-family: "Coolvetica";
+    font-size: 3em;
+    transition: transform 1s, color 1s;
+}
+
+#submit:hover{
+    transform: translateY(-0.2em);
+    color: darkgreen;
+}
+
+
+@font-face {
+    font-family: 'Coolvetica';
+    src: url('../coolvetica\ rg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+

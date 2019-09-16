@@ -1,3 +1,4 @@
-function log(){
-    console.log("YOOO");
+function submitClick(){
+
+    
 }
