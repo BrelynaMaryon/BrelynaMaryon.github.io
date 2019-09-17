@@ -22,7 +22,7 @@ html{
     font-family: "Coolvetica";
 }
 
-.message{
+#message{
     border-radius: 0.5em;
     box-shadow: 0.2em;
     width: 80%;

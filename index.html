@@ -15,17 +15,18 @@
         <div id="mainframe">
 
             <div id="hbandrew">Happy Birthday Andrew!</div>
-            <textarea class="message" placeholder="Birthday wishes here fam!"></textarea>
+            <textarea id="message" placeholder="Birthday wishes here fam!"></textarea>
             <div id="submit">Submit</div>
 
         </div>
 
-        <script src="./js/scripts.js"></script>
+        <script src="./js/bundle.js"></script>
         <script>
         
             const submit = document.getElementById("submit");
+            const data = document.getElementById("message").value;
 
-            submit.addEventListener("click",submitClick);
+            submit.addEventListener("click",cSubmit("Angela",data));
         
         </script>
 
