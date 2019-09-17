@@ -1,4 +1,4 @@
-cSubmit = (author) =>{
+cSubmit = () =>{
 
     const data = document.getElementById("message").value;
     const author = document.getElementById("author").value;
