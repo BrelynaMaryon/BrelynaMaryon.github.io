@@ -16,6 +16,10 @@
 
             <div id="hbandrew">Happy Birthday Andrew!</div>
             <textarea id="message" placeholder="Birthday wishes here fam!"></textarea>
+            <div id="from">
+                Much love,
+                <input id="author" placeholder="enter your name" maxlength="20" minlength="1"></textarea>
+            </div>
             <div id="submit">Submit</div>
 
         </div>
@@ -24,9 +28,7 @@
         <script>
         
             const submit = document.getElementById("submit");
-            const data = document.getElementById("message").value;
-
-            submit.addEventListener("click",cSubmit("Angela",data));
+            submit.addEventListener("click",cSubmit);
         
         </script>
 

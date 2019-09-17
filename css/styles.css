@@ -28,7 +28,7 @@ html{
     width: 80%;
     height: 30em;
     resize: none;
-    margin: 3em;
+    margin-top: 3em;
     outline: none;
     box-sizing: content-box;
     padding: 3em;
@@ -37,6 +37,7 @@ html{
 
 
 #submit{
+    margin-top: 1em;
     font-family: "Coolvetica";
     font-size: 3em;
     transition: transform 1s, color 1s;
@@ -47,6 +48,34 @@ html{
     color: darkgreen;
 }
 
+
+#from{
+    font-size:48px;
+    font-family: "Coolvetica";
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin-top:1em;
+}
+
+#author{
+    width: 100%;
+    resize: none;
+    outline: none;
+    border:none;
+    border-bottom: 0.1em;
+    border-bottom-style: dotted;
+    color:black;
+    box-sizing: border-box;
+    background-color:none;
+    font-size: 40px;
+    margin-top: 0.2em;
+    font-family: "Coolvetica";
+    text-align: center;
+    color: goldenrod;
+}
 
 @font-face {
     font-family: 'Coolvetica';
