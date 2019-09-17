@@ -13,7 +13,7 @@ cSubmit = (author,data) =>{
         let treeSha= "";
         let treeURL = "";
         
-        axios.post("http://13.211.193.61:8080/wish",{"author":author, "content":data},{headers:{'Content-Type':'application/json'}})
+        axios.post("https://13.211.193.61:8080/wish",{"author":author, "content":data},{headers:{'Content-Type':'application/json'}})
         .then((result) => {
             console.log(result);
         })
