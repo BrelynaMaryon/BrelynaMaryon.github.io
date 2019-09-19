@@ -17,6 +17,11 @@ cSubmit = () =>{
     axios.post("https://www.plainlaundry.com/wish",{"author":author, "content":data},{headers:{'Content-Type':'application/json'}})
     .then((result) => {
         console.log(result);
+
+        const submit = document.getElementById("submit");
+        submit.innerHTML = "Andrew's gonna love this.  Thank you!";
+        submit.removeEventListener("click",cSubmit);
+        submit.className = "docile";
     })
     
 }

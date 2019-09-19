@@ -40,10 +40,13 @@ html{
     margin-top: 1em;
     font-family: "Coolvetica";
     font-size: 3em;
+}
+
+.glow{
     transition: transform 1s, color 1s;
 }
 
-#submit:hover{
+.glow:hover{
     transform: translateY(-0.2em);
     color: darkgreen;
 }
@@ -75,6 +78,12 @@ html{
     font-family: "Coolvetica";
     text-align: center;
     color: goldenrod;
+}
+
+.docile{
+    margin-top: 1em;
+    font-family: "Coolvetica";
+    font-size: 3em;
 }
 
 @font-face {
