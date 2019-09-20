@@ -25,19 +25,19 @@ html{
 #message{
     border-radius: 0.5em;
     box-shadow: 0.2em;
+    margin-top: 1em;
     width: 80%;
     height: 30em;
     resize: none;
-    margin-top: 3em;
     outline: none;
-    box-sizing: content-box;
-    padding: 3em;
+    box-sizing: border-box;
+    padding: 1em;
     background-color: lightgray;
+    font-size: 3em;
 }
 
 
 #submit{
-    margin-top: 1em;
     font-family: "Coolvetica";
     font-size: 3em;
 }
@@ -60,7 +60,7 @@ html{
     flex-direction: column;
     align-items: center;
     width: 50%;
-    margin-top:1em;
+    margin:1em 1em;
 }
 
 #author{
@@ -93,4 +93,16 @@ html{
     font-style: normal;
 }
 
+.fileupload{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:2em;
+}
 
+
+#upfile{
+    background-color: #222222;
+    color:#EEEEEE;
+}

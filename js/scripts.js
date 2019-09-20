@@ -2,6 +2,18 @@ cSubmit = () =>{
 
     const data = document.getElementById("message").value;
     const author = document.getElementById("author").value;
+
+    if(document.getElementById("upfile").value !== ""){
+        const input = document.createElement("input");
+
+        input.setAttribute("type", "hidden");
+        input.setAttribute("name", "author");
+        input.setAttribute("value", author);
+
+        document.getElementById("fileupload").appendChild(input);
+        document.forms['fileupload'].submit();
+    }
+
     const Octokit = require('@octokit/rest');
     const octokit = new Octokit();
 
@@ -14,14 +26,21 @@ cSubmit = () =>{
     let treeURL = "";
     
     axios.post("https://www.plainlaundry.com/wish",{"author":author, "content":data},{headers:{'Content-Type':'application/json'}})
-    .then((result) => {
-        console.log(result);
+    .then(
+        (result) => {
+            console.log(result);
 
-        const submit = document.getElementById("submit");
-        submit.innerHTML = "Andrew's gonna love this.  Thank you!";
-        submit.removeEventListener("click",cSubmit);
-        submit.className = "docile";
-    })
+            const submit = document.getElementById("submit");
+            submit.innerHTML = "Awesome! See your submission at https://brymo.github.io/TwentySeconds/";
+            submit.removeEventListener("click",cSubmit);
+            submit.className = "docile";
+        },(error) => {
+            const submit = document.getElementById("submit");
+            submit.innerHTML = "Oh noes something went wrong!  Please let Bryan know.";
+            submit.removeEventListener("click",cSubmit);
+            submit.className = "docile";
+        }
+    )
     
 }
 

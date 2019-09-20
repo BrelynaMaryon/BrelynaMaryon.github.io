@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Starter Website!</title>
+        <title>Submissions</title>
         <meta name="description" content="Whatever you want">
         <meta name="author" content="Sitepoint + Brymo">
 
@@ -14,16 +14,21 @@
 
         <div id="mainframe">
 
-            <div id="hbandrew">Happy Birthday Andrew!</div>
-            <textarea id="message" placeholder="Birthday wishes here fam!"></textarea>
+            <div id="hbandrew">It's Andrew's Birthday!</div>
+            <textarea id="message" placeholder="Send him a message here.  Make sure to leave your name and choose a photo too if you'd like!"></textarea>
             <div id="from">
-                Much love,
                 <input id="author" placeholder="enter your name" maxlength="20" minlength="1"></textarea>
             </div>
+
+            <form target="hiddenFrame" id="fileupload" name="fileupload" class="fileupload" action="https://www.plainlaundry.com/pics" method="post" enctype="multipart/form-data">
+                <input id="upfile" type="file" name="upfile" value="">
+            </form>
+
             <div id="submit" class="glow">Submit</div>
 
         </div>
 
+        <iframe name="hiddenFrame" width="0" height="0" border="0" style="display: none;"></iframe>
         <script src="./js/bundle.js"></script>
         <script>
         
