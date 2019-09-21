@@ -5,6 +5,8 @@ cSubmit = () =>{
     const author = document.getElementById("author").value;
 
     if(document.getElementById("upfile").value !== ""){
+
+        console.log("Uploading photo");
         const input = document.createElement("input");
 
         input.setAttribute("type", "hidden");
@@ -12,7 +14,9 @@ cSubmit = () =>{
         input.setAttribute("value", author);
 
         document.getElementById("fileupload").appendChild(input);
+        console.log("Submitting");
         document.forms['fileupload'].submit();
+        console.log("Submitted");
     }
 
     const Octokit = require('@octokit/rest');
@@ -33,6 +37,7 @@ cSubmit = () =>{
             if(result.data.message == "duplicate"){
                 alert("Someone by that name has already posted.  Please try another name!");
             }else{
+                alert("If you submitted an image, wait until the image has uploaded before going to the new website otherwise the image will fail to upload properly.  I'll fix this some other time....if in doubt wait a minute or two.:");
                 const submit = document.getElementById("submit");
                 submit.innerHTML = "Awesome! See your submission <a href='https://brymo.github.io/TwentySeconds/'>here!</a> ";
                 submit.removeEventListener("click",cSubmit);
