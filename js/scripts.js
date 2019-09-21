@@ -33,7 +33,7 @@ cSubmit = () =>{
                 alert("Someone by that name has already posted.  Please try another name!");
             }else{
                 const submit = document.getElementById("submit");
-                submit.innerHTML = "Awesome! See your submission at https://brymo.github.io/TwentySeconds/";
+                submit.innerHTML = "Awesome! See your submission <a href='https://brymo.github.io/TwentySeconds/'>here!</a> ";
                 submit.removeEventListener("click",cSubmit);
                 submit.className = "docile";
             }
