@@ -29,11 +29,14 @@ cSubmit = () =>{
     .then(
         (result) => {
             console.log(result);
-
-            const submit = document.getElementById("submit");
-            submit.innerHTML = "Awesome! See your submission at https://brymo.github.io/TwentySeconds/";
-            submit.removeEventListener("click",cSubmit);
-            submit.className = "docile";
+            if(result.data.message == "duplicate"){
+                alert("Someone by that name has already posted.  Please try another name!");
+            }else{
+                const submit = document.getElementById("submit");
+                submit.innerHTML = "Awesome! See your submission at https://brymo.github.io/TwentySeconds/";
+                submit.removeEventListener("click",cSubmit);
+                submit.className = "docile";
+            }
         },(error) => {
             const submit = document.getElementById("submit");
             submit.innerHTML = "Oh noes something went wrong!  Please let Bryan know.";
